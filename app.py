@@ -140,7 +140,23 @@ def show_sidebar():
         value=DEFAULT_API_KEY,
         type="password"
     )
-    st.sidebar.markdown("[APIキーの取得方法](https://console.cloud.google.com/apis/credentials)")
+    st.sidebar.markdown("[📝 APIキーの取得方法](https://console.cloud.google.com/apis/credentials)")
+    
+    # 料金や利用上の注意に関するExpanderを表示（小さめの文字）
+    with st.sidebar.expander("💡 料金・ご利用について"):
+        st.markdown(
+            """
+            <div style="font-size: 0.85em; color: #888;">
+            ・APIキーはご自身のGoogle Cloudのものを使用してください<br>
+            ・Places APIの料金目安：20件取得で約$0.06（約9円）<br>
+            ・月$200までは無料枠内で利用可能です<br>
+            ・使いすぎ防止のため1回の取得は最大60件までです<br>
+            ・APIキーの利用状況は<a href="https://console.cloud.google.com/apis/dashboard" target="_blank">Google Cloud Console</a>で確認できます
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
     st.sidebar.markdown("---")
     
     # ====== リスト管理セクション ======
