@@ -211,7 +211,7 @@ def show_sidebar():
 
 
 def main():
-    st.set_page_config(page_title="営業リスト収集ツール", layout="centered", page_icon="🏢")
+    st.set_page_config(page_title="ListAI Pro", layout="centered", page_icon="🏢")
 
     # ユーザー指示により、Streamlitのデフォルトメニュー・フッター・ヘッダー等を非表示
     st.markdown("""
@@ -260,8 +260,8 @@ def main():
         </style>
     """, unsafe_allow_html=True)
     
-    st.title("🏢 営業リスト収集ツール")
-    st.markdown("Google Mapsを用いて業種・地域から企業情報を収集します。")
+    st.title("🏢 ListAI Pro")
+    st.markdown("業種・エリアを指定するだけで、営業リストを自動生成。")
     
     # メイン画面（履歴表示 or 検索フォーム）
     if st.session_state.selected_history_id:
