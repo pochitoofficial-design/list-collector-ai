@@ -229,6 +229,13 @@ def main():
     # UIの微調整
     st.markdown("""
         <style>
+        /* デフォルトのStreamlit要素を非表示にする */
+        #MainMenu {visibility: hidden;}            /* 右上のハンバーガーメニュー */
+        footer {visibility: hidden;}              /* Made with Streamlit のフッター */
+        header {visibility: hidden;}              /* 右上のデプロイメニュー周りのヘッダー */
+        .stDeployButton {display: none;}          /* デプロイボタン（念のため個別指定） */
+        .css-1rs6os {visibility: hidden;}         /* GitHubアイコンなどを含むツールバー */
+
         /* 入力時の「Enterキーを押して...」という文字を隠す（文字被り防止） */
         div[data-testid="InputInstructions"] {
             display: none !important;
