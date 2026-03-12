@@ -212,6 +212,17 @@ def show_sidebar():
 
 def main():
     st.set_page_config(page_title="営業リスト収集ツール", layout="centered", page_icon="🏢")
+
+    # ユーザー指示により、Streamlitのデフォルトメニュー・フッター・ヘッダー等を非表示
+    st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stDeployButton {display: none;}
+    [data-testid="stToolbar"] {display: none;}
+    </style>
+    """, unsafe_allow_html=True)
     
     # --------------------------------
     # セッションステートの初期化
